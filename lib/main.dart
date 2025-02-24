@@ -1,6 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:sec1/task1.dart';
+import 'package:sec1/task3.dart';
 
 void main() {
   runApp(
@@ -20,13 +20,14 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // ignore: deprecated_member_use
       useInheritedMediaQuery: true,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         useMaterial3: true,
       ),
-      home: Task1(),
+      home: Task3(),
     );
   }
 }

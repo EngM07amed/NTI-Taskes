@@ -11,31 +11,48 @@ class Task1 extends StatelessWidget {
         leading: Icon(Icons.dehaze),
         centerTitle: true,
         title: Text(
-          'Task 1',
+          'App Name',
           style: TextStyle(color: Colors.blue),
         ),
         actions: [
-          Icon(Icons.search_rounded),
           SizedBox(
             width: 10,
           ),
-          Icon(Icons.settings),
+          Text(
+            'hi',
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Icon(Icons.search_rounded),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Hello World',
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+            child: Text(
+              'Welcome',
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Icon(Icons.ac_unit_outlined)
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 200,
+          ),
+          Text('My name is mohamed'),
+          SizedBox(
+            height: 30,
+          ),
+          Text('my age'),
+          Text('16'),
+          SizedBox(
+            height: 300,
+          ),
+          Center(child: Text('Buy'))
+        ],
       ),
     );
   }
