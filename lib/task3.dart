@@ -47,142 +47,119 @@ class Task3 extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black12,
-                      blurRadius: 5,
-                      offset: Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    fillColor: Colors.transparent,
-                    filled: true,
-                    enabledBorder: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    prefixIcon: Icon(Icons.home, color: Colors.red),
-                    labelText: 'Task Group',
-                    hintText: 'Home',
-                    hintStyle: TextStyle(fontSize: 14),
+              TextFormField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  prefixIcon: Icon(Icons.home, color: Colors.red),
+                  labelText: 'Task Group',
+                  hintText: 'Home',
+                  hintStyle: TextStyle(fontSize: 14),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
                   ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  contentPadding:
+                      EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 ),
               ),
+
               SizedBox(height: 15),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black12,
-                      blurRadius: 5,
-                      offset: Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    fillColor: Colors.transparent,
-                    filled: true,
-                    enabledBorder: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    labelText: 'Task Name',
-                    hintText: 'Grocery Shopping App',
-                    hintStyle: TextStyle(fontSize: 14),
+
+              // Task Name Field
+              TextFormField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  labelText: 'Task Name',
+                  hintText: 'Grocery Shopping App',
+                  hintStyle: TextStyle(fontSize: 14),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
                   ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  contentPadding:
+                      EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                ),
+              ),
+
+              SizedBox(height: 20),
+
+              // Description Field
+              TextFormField(
+                maxLines: 5,
+                textAlignVertical: TextAlignVertical.top,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  labelText: 'Description',
+                  hintText:
+                      'Go for grocery to buy some products.\nGo for grocery to buy some products.\nGo for grocery to buy some products.\nGo for grocery to buy some products.',
+                  hintStyle: TextStyle(fontSize: 14),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  contentPadding:
+                      EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 ),
               ),
               SizedBox(height: 20),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black12,
-                      blurRadius: 5,
-                      offset: Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: SizedBox(
-                  height: 150,
-                  child: TextFormField(
-                    maxLines: 5,
-                    textAlignVertical: TextAlignVertical.top,
-                    decoration: InputDecoration(
-                      fillColor: Colors.transparent,
-                      filled: true,
-                      enabledBorder: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                      labelText: 'Description',
-                      hintText:
-                          'Go for grocery to buy some products.\n Go for grocery to buy some products.\n Go for grocery to buy some products.\n Go for grocery to buy some products.',
-                      hintStyle: TextStyle(fontSize: 14),
-                      contentPadding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                    ),
+              TextFormField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  prefixIcon:
+                      Icon(Icons.date_range_outlined, color: Colors.green),
+                  labelText: 'Start Date',
+                  hintText: '01 May, 2022    10:00 am',
+                  hintStyle: TextStyle(fontSize: 14),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
                   ),
-                ),
-              ),
-              SizedBox(height: 10),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black12,
-                      blurRadius: 5,
-                      offset: Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    fillColor: Colors.transparent,
-                    filled: true,
-                    enabledBorder: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    prefixIcon:
-                        Icon(Icons.date_range_outlined, color: Colors.green),
-                    labelText: 'Star Date',
-                    hintText: '01 May, 2022    10:00 am',
-                    hintStyle: TextStyle(fontSize: 14),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
                   ),
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 ),
               ),
               SizedBox(height: 20),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black12,
-                      blurRadius: 5,
-                      offset: Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    fillColor: Colors.transparent,
-                    filled: true,
-                    enabledBorder: InputBorder.none,
-                    focusedBorder: InputBorder.none,
-                    prefixIcon:
-                        Icon(Icons.date_range_outlined, color: Colors.green),
-                    labelText: 'End Date',
-                    hintText: '30 June, 2022    10:00 pm',
-                    hintStyle: TextStyle(fontSize: 14),
+              TextFormField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  prefixIcon:
+                      Icon(Icons.date_range_outlined, color: Colors.green),
+                  labelText: 'End Date',
+                  hintText: '30 June, 2022    10:00 pm',
+                  hintStyle: TextStyle(fontSize: 14),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
                   ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Colors.transparent),
+                  ),
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 ),
+                style: TextStyle(backgroundColor: Colors.white),
               ),
               SizedBox(
                 height: 80,
