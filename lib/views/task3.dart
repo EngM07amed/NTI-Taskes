@@ -51,10 +51,32 @@ class Task3 extends StatelessWidget {
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  prefixIcon: Icon(Icons.home, color: Colors.red),
-                  labelText: 'Task Group',
-                  hintText: 'Home',
-                  hintStyle: TextStyle(fontSize: 14),
+                  prefixIcon: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.home, color: Colors.red),
+                    ],
+                  ),
+                  label: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Task Group',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
+                        ),
+                      ),
+                      SizedBox(height: 2),
+                      Text(
+                        'Home',
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide(color: Colors.transparent),
@@ -66,18 +88,33 @@ class Task3 extends StatelessWidget {
                   contentPadding:
                       EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 ),
+                style: TextStyle(backgroundColor: Colors.white),
               ),
-
               SizedBox(height: 15),
-
-              // Task Name Field
               TextFormField(
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  labelText: 'Task Name',
-                  hintText: 'Grocery Shopping App',
-                  hintStyle: TextStyle(fontSize: 14),
+                  label: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Task Name',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
+                        ),
+                      ),
+                      SizedBox(height: 2), // مسافة صغيرة بين العنوان والقيمة
+                      Text(
+                        'Grocery Shopping App',
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide(color: Colors.transparent),
@@ -89,21 +126,35 @@ class Task3 extends StatelessWidget {
                   contentPadding:
                       EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 ),
+                style: TextStyle(backgroundColor: Colors.white),
               ),
-
               SizedBox(height: 20),
-
-              // Description Field
               TextFormField(
                 maxLines: 5,
                 textAlignVertical: TextAlignVertical.top,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  labelText: 'Description',
-                  hintText:
-                      'Go for grocery to buy some products.\nGo for grocery to buy some products.\nGo for grocery to buy some products.\nGo for grocery to buy some products.',
-                  hintStyle: TextStyle(fontSize: 14),
+                  label: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Description',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'Go for grocery to buy some products.\nGo for grocery to buy some products.\nGo for grocery to buy some products.\nGo for grocery to buy some products.',
+                        style: TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide(color: Colors.transparent),
@@ -115,17 +166,13 @@ class Task3 extends StatelessWidget {
                   contentPadding:
                       EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 ),
+                style: TextStyle(backgroundColor: Colors.white),
               ),
               SizedBox(height: 20),
               TextFormField(
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  prefixIcon:
-                      Icon(Icons.date_range_outlined, color: Colors.green),
-                  labelText: 'Start Date',
-                  hintText: '01 May, 2022    10:00 am',
-                  hintStyle: TextStyle(fontSize: 14),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide(color: Colors.transparent),
@@ -136,18 +183,61 @@ class Task3 extends StatelessWidget {
                   ),
                   contentPadding:
                       EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                  prefixIcon:
+                      Icon(Icons.date_range_outlined, color: Colors.green),
+                  label: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Start Date',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
+                        ),
+                      ),
+                      SizedBox(height: 2),
+                      Text(
+                        '01 May, 2022    10:00 am',
+                        style: TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
                 ),
+                style: TextStyle(backgroundColor: Colors.white),
               ),
               SizedBox(height: 20),
               TextFormField(
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  prefixIcon:
+                  prefixIcon: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
                       Icon(Icons.date_range_outlined, color: Colors.green),
-                  labelText: 'End Date',
-                  hintText: '30 June, 2022    10:00 pm',
-                  hintStyle: TextStyle(fontSize: 14),
+                    ],
+                  ),
+                  label: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'End Date',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[700],
+                        ),
+                      ),
+                      SizedBox(height: 2),
+                      Text(
+                        '30 June, 2022    10:00 pm',
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide(color: Colors.transparent),

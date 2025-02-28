@@ -1,6 +1,8 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:sec1/task3.dart';
+
+import 'package:sec1/views/task4.dart';
+import 'package:sec1/views/task5.dart';
 
 void main() {
   runApp(
@@ -25,9 +27,9 @@ class Application extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        useMaterial3: true,
+        // useMaterial3: true,
       ),
-      home: Task3(),
+      home: Task5(),
     );
   }
 }
